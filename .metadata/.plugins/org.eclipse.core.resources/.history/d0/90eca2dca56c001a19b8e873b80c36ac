@@ -1,0 +1,58 @@
+//import java.util.Locale;
+import java.util.Scanner;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		float a1,a2,b1,b2,c1,c2;
+		float p1,p2;
+		double area1,area2;
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter the measures of triangle X in decimal:");
+		a1 = input.nextFloat();
+		b1 = input.nextFloat();
+		c1 = input.nextFloat();
+		System.out.println("Enter the measures of triangle Y in decimal:");
+		a2 = input.nextFloat();
+		b2 = input.nextFloat();
+		c2 = input.nextFloat();
+		
+		p1=(a1+b1+c1)/2;
+		p2=(a2+b2+c2)/2;
+		
+		area1=Math.sqrt(p1*(p1-a1)*(p1-b1)*(p1-c1));
+		area2=Math.sqrt(p2*(p2-a2)*(p2-b2)*(p2-c2));
+
+		System.out.println("Triangle X area: " + area1);
+		System.out.println("Triangle Y area: " + area2);
+		
+		if (area1>area2)
+			System.out.println("Larger area: X");
+		else
+			System.out.println("Larger area: Y");
+		
+		input.close();
+		/* section 1-7		
+		System.out.println("hello world");
+		String product1 = "Computer", product2 = "Office desk";
+		
+		int age = 30, code = 5290;
+		char gender = 'F';
+		
+		double price1 = 2100.0, price2 = 650.50, measure = 53.234567;
+		
+		System.out.printf("Products:\n%s, which price is $ %.2f\n",product1,price1);
+		System.out.printf("%s, which price is $ %.2f\n\n",product2,price2);
+		System.out.printf("Record: %d years old, code %d and gender %c\n\n",age,code,gender);
+		System.out.printf("Measure with 8 dec places: %.8f\nRounded (3-dec places): %.3f\n",measure,measure);
+		//Default uses only 6 places.
+		Locale.setDefault(Locale.US);
+		System.out.printf("US dec point: %.3f",measure);*/
+		
+	}
+
+}
