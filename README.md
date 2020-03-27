@@ -1,2 +1,2 @@
 # javaStudies
-The name speak for itself
+The name speaks for itself
