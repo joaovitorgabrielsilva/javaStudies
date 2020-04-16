@@ -3,13 +3,24 @@ package entities;
 public class Product {
 	
 	public String name;
-	public double price;
-	public int quantity;
+	public Double price;
+	public Integer quantity;
 	//public para outro arquivo poder utilizar
 	
+	public Product(String name, double price, int quantity) {
+		this.name = name;
+		this.price = price;
+		this.quantity = quantity;
+	}
+	
+	public Product() {
+		// TODO Auto-generated constructor stub
+	}
+
 	private double totalValueInStock() {
 		return price*quantity;
 	}
+
 	public void addProducts(int quantityToAdd) {
 		this.quantity += quantityToAdd;
 	}
@@ -19,7 +30,8 @@ public class Product {
 	}
 
 	public String toString() {
-		return name + ", $ "+String.format("%.2f", price) + ", " + quantity+" units, Total: $ "+String.format("%.2f", totalValueInStock());
+		//return name + ", $ "+String.format("%.2f", price) + ", " + quantity+" units, Total: $ "+String.format("%.2f", totalValueInStock());
+		return name + ","+String.format("%.2f", totalValueInStock());
 	}
 	
 }
