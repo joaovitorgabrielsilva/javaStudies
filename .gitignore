@@ -2,7 +2,7 @@
 .metadata
 .plugins
 .plugins/
-./chess-system
+.chess-system/
 
 # Compiled class file
 *.class
